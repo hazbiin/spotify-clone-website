@@ -1,0 +1,207 @@
+
+
+/* ---------------base-styles-------------- */
+html{
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body,html,p,div,span,button{
+    padding:0;
+    margin:0;
+}
+@font-face {
+    font-family: 'spotifymix-bold';
+    src: url(assets/fonts/SpotifyMixUI-Bold-4264b799009b1db5c491778b1bc8e5b7.woff2);
+}
+@font-face {
+    font-family: 'spotifymix-regular';
+    src: url(assets/fonts/SpotifyMixUI-Regular-cc3b1de388efa4cbca6c75cebc24585e.woff2);
+}
+@font-face {
+    font-family: 'spotifymix-title-bold';
+    src: url(assets/fonts/SpotifyMixUITitle-Bold-37290f1de77f297fcc26d71e9afcf43f.woff2);
+}
+@font-face {
+    font-family: 'spotifymix-title-extrabold';
+    src: url(assets/fonts/SpotifyMixUITitle-Extrabold-ba6c73cd7f82c81e49cf2204017803ed.woff2);
+}
+@font-face {
+    font-family: 'spotifymix-title-variable';
+    src: url(assets/fonts/SpotifyMixUITitleVariable-8769ccfde3379b7ebcadd9529b49d0cc.woff2);
+}
+body{
+    font-size: 16px;
+    line-height: normal;
+    text-transform: none;
+    color: #fff;
+    background-color: #121212;
+}
+.flex{
+    display: flex;
+}
+a{
+    text-decoration: none;
+}
+/* -------------------header---------------- */
+.header{
+    background-color: #000;
+    align-items: center;
+    height: 56px;
+    padding: 16px;
+    gap: 16px;
+}
+.logo-section{
+    align-items: center;
+}
+.logo-link{
+    height: 32px;
+}
+.logo-icon{
+    height: 32px;
+}
+.search-link{
+   align-items: center;
+   padding: 0 16px;
+}
+.button{
+    background-color: #fff;
+    border: none;
+    color: #000;
+    text-align: center;
+    font-family: 'spotifymix-bold';
+    font-size: 13px;
+    font-weight: 700;
+    border-radius: 9999px;
+    display: block;
+    align-self: center;
+    position: relative;
+}
+.button-text{
+    padding: 4px 16px;
+    justify-content: center;
+    align-items: center;
+    overflow-wrap: anywhere;
+    min-block-size: 32px;
+}
+.menu-container{
+    align-items: center;
+}
+.menu-button{
+    background:transparent;
+    border: none;
+    margin-left: 16px;
+    align-items: center;
+    justify-content: center;
+}
+/* --------------get premium banner------------- */
+.close-button{
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    padding: 12px;
+}
+.close-icon{
+    width: 17px;
+    height: 24px;
+}
+.get-premium-banner{
+    position: relative;
+    padding: 32px 16px;
+    background-color: #ffcdd2;
+    flex-direction: column;
+}
+.banner-heading{
+    font-family: 'spotifymix-title-variable';
+    font-size:32px;
+    font-weight: 700;
+    color: #000;
+    text-wrap: balance;
+}
+.banner-description{
+    font-family: 'spotifymix-regular';
+    font-size: 16px;
+    color: #000;
+    font-weight: 400;
+}
+.banner-button-container{
+    margin-top: 8px;
+}
+.get-premium-banner .button{
+    background-color: #000;
+    color: #fff;
+    display: inline-block;
+}
+/* ---------------main-content--------------- */
+.main-content-container{
+    padding:0 16px;
+}
+.row-heading{
+    margin-top: 24px;
+    margin-bottom: 12px;
+}
+.heading{
+    font-family: 'spotifymix-title-variable';
+    font-size: 20px;
+    font-weight: 700;
+    line-height: normal;
+    text-wrap: balance;
+}
+.row-carousel-container{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    width: 100vw;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+.row-carousel-container::-webkit-scrollbar{
+    display: none;
+}
+.card{
+    flex-direction: column;
+    gap: 8px;
+    padding: 8px;
+    /* padding-top: 3px; */
+    max-inline-size: 168px;
+    min-block-size: 48px;
+}
+.row-carousel-container .card:first-child{
+    margin-left: 8px;
+}
+.row-carousel-container .card:last-child{
+    margin-right: 8px;
+}
+.card-image{
+    display: block;
+    width: 100%;
+    min-width: 152px;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border-radius: 4px;
+}
+.card-title-container{
+    align-items: center;
+}
+.title-link{
+    text-decoration: none;
+}
+.title-text{
+    color: white;
+    font-family: 'spotifymix-regular';
+}
+/* .main-content-container .row:nth-child(2) .card{
+    min-block-size: 216.800px;
+    padding-top: 4px;
+}
+.main-content-container .row:nth-child(3) .card{
+    min-block-size: 216.800px;
+    padding-top: 4px;
+} */
